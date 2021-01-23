@@ -12,4 +12,4 @@ console.log(5*2);
 
 console.log("Hello World"); //pojawia sie string
 console.log(Hello World); // błąd poieważ nie ma zmiennej
-console.log("Hello World); // błąd bo nie ma nawiasu "
+console.log("Hello World); // błąd bo nie ma cudyzsłowia kończącego  "
