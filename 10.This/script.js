@@ -61,19 +61,41 @@ function Person(name, lastname, age, country, city) {
 const person1 = new Person('Jan', 'Dzban', 25, 'Poland', 'Warsaw');
 const person2 = new Person('Grzegorz', 'Orzech', 16, 'Poland', 'Warsaw');
 
+person1.showDetails();
+person1.addOneYear();
+person1.showDetails();
 
-Person.prototype.favoriteFood = [];
-Person.prototype.showFavoriteFood = function () {
+person1.addOneYear();
+person1.addOneYear();
+person1.addOneYear();
+
+person1.showDetails();
+
+person2.showDetails();
+person2.addOneYear();
+person2.showDetails();
+
+person1.favoriteFood = [];
+person1.showFavoriteFood = function () {
     console.log("Foods:" + this.favoriteFood);
 };
+person1.addFavoriteFood = function (item) {
+    this.favoriteFood.push(item);
+};
 
-Person.prototype.addFavoriteFood = function (item) {
+person2.favoriteFood = [];
+person2.showFavoriteFood = function () {
+    console.log("Foods:" + this.favoriteFood);
+};
+person2.addFavoriteFood = function (item) {
     this.favoriteFood.push(item);
 };
 
 person1.addFavoriteFood("jabłko");
-person2.addFavoriteFood("jeżyk");
+person1.addFavoriteFood("kurczak");
 person1.showFavoriteFood();
+person2.addFavoriteFood("jeżyk");
+person2.showFavoriteFood();
 
 
 
